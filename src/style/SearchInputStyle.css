@@ -1,0 +1,32 @@
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    font-size: 15px;
+    margin: 2px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+input[type=text] {
+    width: 150px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+  }
+  input[type=text]:focus {
+    width: 250px;
+  }
+
+#btn {
+    border: 2px solid rgb(39, 37, 37);
+    background-color: rgb(173, 93, 93);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-color: coral;
+}
