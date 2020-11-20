@@ -79,9 +79,10 @@ function MemeGenerator() {
     return (
         <div className="App">
         <form onSubmit={handleSubmit}>
-            <input type="text" name="top" value={topText} onChange={handleChange} />
+            <input type="text" name="top" placeholder="first meme text" value={topText} onChange={handleChange} />
             <input
-                type="text"
+                type="text" 
+                placeholder="second meme text"
                 name="bottom"
                 value={bottomText}
                 onChange={handleChange}
