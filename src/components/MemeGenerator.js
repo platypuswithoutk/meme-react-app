@@ -12,9 +12,18 @@ function MemeGenerator() {
     const [clickedElementClass] = useState("clicked-img");
 
     useEffect(() => {
+        const idMemes = [
+            181913649, 112126428, 87743020, 217743513, 124822590, 438680, 247375501, 148909805, 252600902,
+            119139145, 4087833, 97984, 178591752, 135256802, 91538330, 91545132, 27813981, 89370399, 61579,
+            135678846, 259237855, 101470, 21735, 6235864, 28251713, 61520, 3218037, 101287, 101288, 61556, 
+            84341851, 14371066, 8072285, 5496396, 61532, 235589, 110163934, 99683372, 4173692, 460541, 16464531,
+            61527, 61546, 563423, 285870, 29617627, 922147, 6531067, 56225174, 61585, 109765, 405658, 61539, 61533,
+            28034788, 61582, 71428573, 89655, 444501, 61544, 1202623, 27920, 61581, 176908, 14230520, 101716, 54401824,
+            61580, 40945639
+        ]
         fetch("https://api.imgflip.com/get_memes")
         .then((response) => response.json())
-        .then((json) => setTemplates(json.data.memes));
+        .then((json) => setTemplates(json.data.memes.filter((meme) => idMemes.includes(parseInt(meme.id)))));
     }, []);
 
     const handleChange = (event) => {
@@ -31,7 +40,7 @@ function MemeGenerator() {
         removeStylesForPreviouslyClickedElement();
         setSelectedId(imageId);
         addStyles(imageId);
-        if(imageId == selectedId) {
+        if(imageId === selectedId) {
             removeStylesForPreviouslyClickedElement();
         }
     };
