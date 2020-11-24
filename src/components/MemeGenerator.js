@@ -40,12 +40,13 @@ function MemeGenerator() {
         removeStylesForPreviouslyClickedElement();
         setSelectedId(imageId);
         addStyles(imageId);
-        if(imageId === selectedId) {
+        if (imageId === selectedId) {
             removeStylesForPreviouslyClickedElement();
+            setSelectedId(null);
         }
     };
 
-    const handleReset = (event) => {
+    const handleReset = () => {
         setMeme(null);
         setTopText("");
         setBottomText("");
@@ -89,7 +90,7 @@ function MemeGenerator() {
             <input type="text" id="topTextInputId" name="top" placeholder="first meme text" value={topText} onChange={handleChange} />
             <input type="text" id="bottomTextInputId" placeholder="second meme text" name="bottom" value={bottomText} onChange={handleChange}/>
             <input type="submit" value="Generate meme" id="btn" />
-            <input type="button" value="Back" id="back-btn" onClick={handleReset}/>
+            <input type="button" value="Start over" id="back-btn" onClick={handleReset}/>
         </form>
         <div className="meme">{meme ? <img src={meme} alt="" /> : null}</div>
         <div className="meme-container">
