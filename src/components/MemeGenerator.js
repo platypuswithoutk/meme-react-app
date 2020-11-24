@@ -45,6 +45,13 @@ function MemeGenerator() {
         }
     };
 
+    const handleReset = (event) => {
+        setMeme(null);
+        setTopText("");
+        setBottomText("");
+        removeStylesForPreviouslyClickedElement();
+      };
+
     function removeStylesForPreviouslyClickedElement() {
         let image = document.getElementById(selectedId);
         if(image){
@@ -79,15 +86,10 @@ function MemeGenerator() {
     return (
         <div className="App">
         <form onSubmit={handleSubmit}>
-            <input type="text" name="top" placeholder="first meme text" value={topText} onChange={handleChange} />
-            <input
-                type="text" 
-                placeholder="second meme text"
-                name="bottom"
-                value={bottomText}
-                onChange={handleChange}
-                />
+            <input type="text" id="topTextInputId" name="top" placeholder="first meme text" value={topText} onChange={handleChange} />
+            <input type="text" id="bottomTextInputId" placeholder="second meme text" name="bottom" value={bottomText} onChange={handleChange}/>
             <input type="submit" value="Generate meme" id="btn" />
+            <input type="button" value="Back" id="back-btn" onClick={handleReset}/>
         </form>
         <div className="meme">{meme ? <img src={meme} alt="" /> : null}</div>
         <div className="meme-container">
