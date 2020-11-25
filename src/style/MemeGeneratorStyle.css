@@ -10,11 +10,12 @@ body {
 
 form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 30px;
 }
 
-input {
+input, button {
     font-size: 15px;
     margin: 2px;
     padding: 10px;
@@ -27,9 +28,10 @@ input[type=text] {
     -webkit-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
   }
-  input[type=text]:focus {
+
+input[type=text]:focus {
     width: 250px;
-  }
+}
 
 #btn, #back-btn {
     border: 2px solid rgb(39, 37, 37);
@@ -44,8 +46,12 @@ input[type=text] {
 }
 
 #back-btn {
-    padding: 0 40px;
+    padding: 0 20px;
 } 
+
+i {
+    padding-left: 20px;
+}
 
 .clicked-img {
     border: 2px solid black !important; 
