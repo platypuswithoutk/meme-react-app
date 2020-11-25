@@ -6,19 +6,19 @@
 h1 {
     font-size: 25px;
 }
+
  li {
     list-style: none;
     font-size: 15px;
  }
 
- .nav {
-     display: flex;
-     
+ .logo {
+     display: flex;  
  }
 
- .nav img {
+ .logo img {
     position: absolute;
     float: left;
-    width: 14vw;
+    width: 13vw;
     padding-left: 20px;
  }

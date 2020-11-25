@@ -6,9 +6,8 @@ class Instruction extends React.Component {
     render() {
         return(
             <div className="instruction">
-                <div className="nav">
-                <img alt="xd" src={meme}></img>
-                
+                <div className="logo">
+                    <img alt="logo" src={meme}></img>
                 </div>
                 <h1>{this.props.title}</h1>
                     <li>1. Select a meme and click on it</li>
