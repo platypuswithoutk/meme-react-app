@@ -92,7 +92,7 @@ function MemeGenerator() {
                     <input type="text" id="bottomTextInputId" placeholder="second meme text" name="bottom" value={bottomText} onChange={handleChange}/>
                     <button type="submit" id="btn">Generate meme</button>
                     <button type="button" id="back-btn" onClick={handleReset}>Start over
-                        <i class="fas fa-undo"></i>
+                        <i className="fas fa-undo"></i>
                     </button>
                 </form>
             </div>

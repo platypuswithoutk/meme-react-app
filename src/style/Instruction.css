@@ -1,0 +1,12 @@
+.instruction {
+    text-align: center;
+    padding-top: 10px;
+}
+
+h1 {
+    font-size: 25px;
+}
+ li {
+    list-style: none;
+    font-size: 15px;
+ }
