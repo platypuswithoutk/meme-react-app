@@ -10,3 +10,15 @@ h1 {
     list-style: none;
     font-size: 15px;
  }
+
+ .nav {
+     display: flex;
+     
+ }
+
+ .nav img {
+    position: absolute;
+    float: left;
+    width: 14vw;
+    padding-left: 20px;
+ }
